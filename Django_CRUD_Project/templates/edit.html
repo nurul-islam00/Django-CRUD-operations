@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/edit/{{books.id}}/update" method="POST">
+    {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" name="name"  aria-describedby="emailHelp" value="{{books.name}}">
+
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Price</label>
+    <input type="text" class="form-control" name="price" value="{{books.price}}">
+  </div>
+  <div class="form-group form-check">
+       <label class="form-check-label" for="exampleCheck1">Author</label>
+    <input type="text" class="form-check-input" name="author" value="{{books.author}}">
+
+  </div>
+  <button type="submit" class="btn btn-primary">Update Book</button>
+</form>
+
+
+</body>
+</html>
